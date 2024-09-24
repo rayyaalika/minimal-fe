@@ -3,7 +3,9 @@
 
 👋 Hello, welcome to our interview task.
 
-This project is designed as an interview task, where the goal is to build a **Login API** and a basic **CRUD service**. It uses **Vite - Node.js** for frontend and can be run with **Yarn** or **npm**. Please follow the instructions below to set up the project.
+This project is designed as an interview task, where the goal is to build a **Login API** and a basic **CRUD service**. It uses **Vite - Node.js** for frontend and can be run with **Yarn** or **npm**.
+
+Please follow the instructions below to set up the project.
 
 Frontend: https://github.com/ptpl-source/starter-pack-interview-fe
 
@@ -15,7 +17,7 @@ Backend: https://github.com/ptpl-source/starter-pack-interview-be
 
 # Important:
 
-**Time Acknowledge**: After cloning the repository, you must send an email after 3 days to the following recipients: kuncoro.baroto@pertamina.com, ahmad.saparhadi@pertamina.com
+**Time Acknowledge**: After cloning the repository, you must send an email after 3 days for both FE & BE repo from your github link to the following recipients: kuncoro.baroto@pertamina.com, ahmad.saparhadi@pertamina.com
 and sopian.iskandar@pertamina.com
 
 ---

@@ -1,7 +1,7 @@
 import axios, { endpoints } from 'src/utils/axios';
 
 import { setSession } from './utils';
-import { STORAGE_KEY } from './constant';
+import { STORAGE_KEY, BASE_URL_SERVER } from './constant';
 
 // ----------------------------------------------------------------------
 
@@ -24,9 +24,9 @@ export const signInWithPassword = async ({ email, password }: SignInParams): Pro
   try {
     const params = { email, password };
 
-    const res = await axios.post(endpoints.auth.signIn, params);
+    const res = await axios.post(BASE_URL_SERVER + endpoints.auth.signIn, params);
 
-    const { accessToken } = res.data;
+    const accessToken = res.data.token_refresh;
 
     if (!accessToken) {
       throw new Error('Access token not found in response');
@@ -76,9 +76,12 @@ export const signUp = async ({
  *************************************** */
 export const signOut = async (): Promise<void> => {
   try {
+
+    await axios.delete(BASE_URL_SERVER + endpoints.auth.signOut);
     await setSession(null);
+
   } catch (error) {
-    console.error('Error during sign out:', error);
+    console.error('Error during sign in:', error);
     throw error;
   }
 };
